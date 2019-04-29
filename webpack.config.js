@@ -23,5 +23,8 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: rootPath(`./src/index.html`)
     })
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true
+  }
 }
