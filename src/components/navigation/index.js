@@ -1,12 +1,12 @@
 import React from 'react'
+import Menu from './menu.sc'
 import NavLink from './nav-link'
-import Pane from './pane.sc'
 
 const AppNavigation = () => (
-  <Pane>
+  <Menu>
     <NavLink icon="chat" to="/chat">Chat room</NavLink>
     <NavLink icon="gear" to="/settings">Settings</NavLink>
-  </Pane>
+  </Menu>
 )
 
 export default AppNavigation

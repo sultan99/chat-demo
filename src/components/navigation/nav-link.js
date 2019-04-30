@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Icon from 'components/icon'
+import Icon from '../icon'
 import Link from './link.sc'
 
 const NavLink = ({icon, to, children}) => (

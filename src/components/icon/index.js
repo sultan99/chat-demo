@@ -20,13 +20,14 @@ function Icon({src, ...props}) {
   )
 }
 
-Svg.defaultProps = {
-  color: `#1c2d41`,
-  shade: 5
+Icon.defaultProps = {
+  height: `24px`,
 }
 
-Svg.propTypes = {
-  color: PropTypes.string,
+Icon.propTypes = {
+  height: PropTypes.string,
+  src: PropTypes.string,
+  width: PropTypes.string,
 }
 
 export default Icon

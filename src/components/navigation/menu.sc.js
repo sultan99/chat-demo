@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Pane = styled.div`
+const Menu = styled.div`
   display: flex;
   font-weight: 700;
   justify-content: space-between;
@@ -8,4 +8,4 @@ const Pane = styled.div`
   padding-top: 24px;
 `
 
-export default Pane
+export default Menu
