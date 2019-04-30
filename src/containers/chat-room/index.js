@@ -1,7 +1,10 @@
 import React from 'react'
+import Pane from './pane.sc'
 
 const ChatRoom = () => (
-  <div>Chat Room</div>
+  <Pane>
+    Chat Room
+  </Pane>
 )
 
 export default ChatRoom
