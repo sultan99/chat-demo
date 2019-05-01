@@ -16,7 +16,7 @@ const right = css`
 const Status = styled.div`
   clear: both;
   color: #818da3;
-  font-size: 12px;
+  font-size: 13px;
   padding-top: 4px;
   ${ifProp(`isOwn`, right, left)}
 `

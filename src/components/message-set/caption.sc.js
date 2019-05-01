@@ -7,7 +7,7 @@ const Caption = styled.h1`
   display: ${ifProp(`visible`, `inline-block`, `none`)};
   float: left;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 0 0 48px;
   padding-bottom: 8px;
 `

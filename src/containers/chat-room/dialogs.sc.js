@@ -6,6 +6,7 @@ const Dialogs = styled.div`
   flex-grow: 1;
   justify-content: flex-end;
   overflow-y: auto;
+  padding-bottom: 12px;
 
   > div + div {
     margin-top: 24px;
