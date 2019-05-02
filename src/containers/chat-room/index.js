@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react'
-import Dialogs from './dialogs.sc'
+import PropTypes from 'prop-types'
 import Message from 'components/message'
 import MessageSender from './message-sender'
+import ScrollArea from './scroll-area'
 import connect from './connect'
 
 const toMessage = userId => (message, index) => (
@@ -14,11 +15,16 @@ const toMessage = userId => (message, index) => (
 
 const ChatRoom = ({appUser, messages}) => (
   <Fragment>
-    <Dialogs>
+    <ScrollArea>
       {messages.map(toMessage(appUser.id))}
-    </Dialogs>
+    </ScrollArea>
     <MessageSender/>
   </Fragment>
 )
+
+ChatRoom.propTypes = {
+  appUser: PropTypes.object,
+  messages: PropTypes.array,
+}
 
 export default connect(ChatRoom)

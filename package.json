@@ -2,9 +2,6 @@
   "name": "chat-demo",
   "version": "0.0.1",
   "description": "Chat demo application.",
-  "sideEffects": [
-    "*.scss"
-  ],
   "scripts": {
     "build": "webpack -p",
     "prebuild": "rimraf dist",
