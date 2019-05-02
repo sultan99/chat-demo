@@ -7,7 +7,9 @@ const Pane = styled.div`
 
   > img {
     bottom: 6px;
+    height: 40px;
     position: absolute;
+    width: 40px;
     ${ifProp(`isOwn`, `right`, `left`)}: 0;
   }
 `

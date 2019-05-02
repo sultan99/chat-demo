@@ -6,7 +6,7 @@ const initialState = {
   user: {
     id: 1,
     name: `guest0001`,
-    imageUrl: `/public/images/tibet-girl.png`,
+    imageUrl: `/public/images/190506.png`,
   },
 }
 

@@ -8,7 +8,7 @@ const initialState = {
       author: {
         id: 99,
         name: `Matt Groening`,
-        imageUrl: `/public/images/matt-groening.png`,
+        imageUrl: `/public/images/190503.png`,
       },
       text: `Hi there! 👋<br/> I'm Matt Groening`,
       time: new Date()
@@ -17,7 +17,7 @@ const initialState = {
       author: {
         id: 99,
         name: `Matt Groening`,
-        imageUrl: `/public/images/matt-groening.png`,
+        imageUrl: `/public/images/190503.png`,
       },
       text: `Welcome to our chat!`,
       time: new Date()
