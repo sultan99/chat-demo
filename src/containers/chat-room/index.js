@@ -1,19 +1,24 @@
 import React, {Fragment} from 'react'
 import Dialogs from './dialogs.sc'
-import MessageSender from 'components/message-sender'
-import MessageSet from 'components/message-set'
-import {users, messages} from './fake-data'
+import Message from 'components/message'
+import MessageSender from './message-sender'
+import connect from './connect'
 
-const ChatRoom = () => (
+const toMessage = userId => (message, index) => (
+  <Message
+    key={index}
+    isOwn={message.author.id === userId}
+    {...message}
+  />
+)
+
+const ChatRoom = ({appUser, messages}) => (
   <Fragment>
     <Dialogs>
-      <MessageSet user={users[0]} messages={messages[0]} isOwn/>
-      <MessageSet user={users[1]} messages={messages[1]}/>
-      <MessageSet user={users[1]} messages={messages[1]} isOwn/>
-      <MessageSet user={users[0]} messages={messages[0]}/>
+      {messages.map(toMessage(appUser.id))}
     </Dialogs>
     <MessageSender/>
   </Fragment>
 )
 
-export default ChatRoom
+export default connect(ChatRoom)

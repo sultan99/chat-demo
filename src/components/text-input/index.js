@@ -4,19 +4,20 @@ import Input from './input.sc'
 
 const onKeyUp = onChange => event => {
   const text = event.key.length === 1
-    ? event.target.innerText + event.key
-    : event.target.innerText
+    ? event.target.innerHTML + event.key
+    : event.target.innerHTML
 
   return onChange(
     event, text
   )
 }
 
-const TextInput = ({placeholder, onChange}) => (
+const TextInput = ({children, placeholder, onChange}) => (
   <Input
     contentEditable
     data-placeholder={placeholder}
     onKeyUp={onKeyUp(onChange)}
+    children={children}
   />
 )
 

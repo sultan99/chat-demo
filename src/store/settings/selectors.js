@@ -3,7 +3,12 @@ import {createSelector} from 'reselect'
 
 export const selectState = R.prop(`settings`)
 
-export const selectUser = () => createSelector(
+export const selectUser = createSelector(
   selectState,
   R.prop(`user`)
+)
+
+export const selectTimeFormat = createSelector(
+  selectState,
+  R.prop(`timeFormat`)
 )

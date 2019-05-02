@@ -21,6 +21,8 @@ const Balloon = styled.div`
   border-radius: 10px;
   clear: both;
   font-size: 15px;
+  max-width: calc(100% - 84px);
+  overflow-wrap: break-word;
   padding: 14px 18px;
   ${ifProp(`isOwn`, author, interlocutor)};
 

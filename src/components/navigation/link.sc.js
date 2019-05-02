@@ -10,7 +10,7 @@ const Link = styled(NavLink)`
     fill: #818da3;
   }
   > span {
-    margin-left: 8px;
+    margin-left: 6px;
     display: none;
   }
 

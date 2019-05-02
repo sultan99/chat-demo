@@ -7,12 +7,6 @@ const Panel = styled.div`
   min-height: 60px;
   position: relative;
 
-  > p {
-    font-size: 15px;
-    height: 100%;
-    padding: 20px 72px 20px 24px;
-  }
-
   > button {
     position: absolute;
     right: 21px;
