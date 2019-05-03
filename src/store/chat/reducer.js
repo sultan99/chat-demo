@@ -1,7 +1,7 @@
 import * as R from 'ramda'
 import {MESSAGE_RECEIVED, SEND_MESSAGE} from './actions'
 import {SET_INPUT_TEXT} from './actions'
-import {updateState} from '../common-fns'
+import {updateState} from 'common/reducer-fns'
 
 const initialState = {
   inputText: ``,

@@ -1,17 +1,6 @@
 import {SET_SETTING} from './actions'
-import {updateState} from '../common-fns'
-
-const initialState = {
-  ctrEnter: false,
-  language: `english`,
-  theme: `light`,
-  timeFormat: `HH:mm:ss`,
-  user: {
-    id: Math.random(),
-    name: `guest0001`,
-    imageUrl: `/public/images/190506.png`,
-  },
-}
+import {updateState} from 'common/reducer-fns'
+import initialState from './initial-state'
 
 function settingsReducer(state = initialState, action) {
   switch (action.type) {

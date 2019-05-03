@@ -19,6 +19,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      common: rootPath(`./src/common`),
       components: rootPath(`./src/components`),
       containers: rootPath(`./src/containers`),
       store: rootPath(`./src/store`),

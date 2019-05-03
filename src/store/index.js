@@ -1,8 +1,8 @@
 import {applyMiddleware, compose, createStore} from 'redux'
-import chatSaga from './chat/saga'
 import createSagaMiddleware from 'redux-saga'
 import devtools from './devtools'
 import reducers from './reducers'
+import sagas from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -15,6 +15,6 @@ const store = createStore(
   reducers, middlewares
 )
 
-sagaMiddleware.run(chatSaga)
+sagaMiddleware.run(sagas)
 
 export default store
