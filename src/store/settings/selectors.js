@@ -8,6 +8,11 @@ export const selectUser = createSelector(
   R.prop(`user`)
 )
 
+export const selectTheme = createSelector(
+  selectState,
+  R.prop(`theme`)
+)
+
 export const selectTimeFormat = createSelector(
   selectState,
   R.prop(`timeFormat`)

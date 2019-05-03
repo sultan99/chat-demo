@@ -1,15 +1,20 @@
-import {createStore} from 'redux'
+import {applyMiddleware, compose, createStore} from 'redux'
+import chatSaga from './chat/saga'
+import createSagaMiddleware from 'redux-saga'
+import devtools from './devtools'
 import reducers from './reducers'
 
-let middlewares
+const sagaMiddleware = createSagaMiddleware()
 
-if (process.env.NODE_ENV === `development`) {
-  const devtools = `__REDUX_DEVTOOLS_EXTENSION__`
-  middlewares = window[devtools] && window[devtools]()
-}
+const middlewares = compose(
+  applyMiddleware(sagaMiddleware),
+  devtools()
+)
 
 const store = createStore(
   reducers, middlewares
 )
+
+sagaMiddleware.run(chatSaga)
 
 export default store

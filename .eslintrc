@@ -21,7 +21,7 @@
     "cond-assign": 0,
     "dot-notation": "error",
     "eqeqeq": "error",
-    "generator-star-spacing": ["error", "before"],
+    "generator-star-spacing": ["error", "after"],
     "indent": ["error", 2, {"SwitchCase": 1}],
     "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
     "keyword-spacing": ["error", {"before": true}],
