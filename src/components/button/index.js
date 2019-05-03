@@ -3,9 +3,10 @@ import Button from './button.sc'
 import Icon from '../icon'
 import PropTypes from 'prop-types'
 
-const SexyButton = ({icon, ...rest}) => (
+const SexyButton = ({icon, children, ...rest}) => (
   <Button {...rest}>
     <Icon src={icon}/>
+    {children}
   </Button>
 )
 

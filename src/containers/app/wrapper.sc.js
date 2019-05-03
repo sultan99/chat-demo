@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   margin: auto;
   max-width: 500px;
   padding: 0 24px;
+  position: relative;
 `
 
 export default Wrapper
