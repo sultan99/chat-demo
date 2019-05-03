@@ -1,5 +1,7 @@
 import * as R from 'ramda'
-import {SEND_MESSAGE, SET_INPUT_TEXT} from './actions'
+import {MESSAGE_RECEIVED, SEND_MESSAGE} from './actions'
+import {SET_INPUT_TEXT} from './actions'
+import {updateState} from '../common-fns'
 
 const initialState = {
   inputText: ``,
@@ -25,12 +27,7 @@ const initialState = {
   ],
 }
 
-const setInputText = R.curry((value, state) =>
-  R.set(
-    R.lensProp(`inputText`),
-    value, state
-  )
-)
+const setInputText = updateState([`inputText`])
 
 const appendMessage = message => R.over(
   R.lensProp(`messages`),
@@ -39,6 +36,7 @@ const appendMessage = message => R.over(
 
 function chatReducer(state = initialState, action) {
   switch (action.type) {
+    case MESSAGE_RECEIVED:
     case SEND_MESSAGE: {
       const setState = R.compose(
         setInputText(``),
