@@ -10,6 +10,7 @@ const ScrollArea = styled.div`
   > :first-child {
     margin-top: auto;
   }
+
   > div + div {
     margin-top: 24px;
   }

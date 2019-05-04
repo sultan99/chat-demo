@@ -6,6 +6,7 @@ const Panel = styled.div`
   margin: 0 -24px;
   min-height: 60px;
   position: relative;
+  transition: top 0.3s;
 
   > button {
     position: absolute;
@@ -15,7 +16,6 @@ const Panel = styled.div`
     &:not(:disabled) {
       top: -4px;
     }
-    transition: top 0.3s;
   }
 `
 

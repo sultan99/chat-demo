@@ -29,8 +29,7 @@
     "reselect": "^4.0.0",
     "saga": "^4.0.0-alpha",
     "socket.io": "^2.2.0",
-    "styled-components": "^4.2.0",
-    "styled-tools": "^1.7.1"
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",

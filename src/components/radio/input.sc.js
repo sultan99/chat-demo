@@ -1,5 +1,6 @@
 import Spot from './spot.sc'
 import styled from 'styled-components'
+import {palette} from 'common/style'
 
 const Input = styled.input`
   opacity: 0;
@@ -12,11 +13,11 @@ const Input = styled.input`
   }
 
   &:checked ~ ${Spot} {
-    border: 1px solid #09afff;
+    border: 1px solid ${palette(`secondary`)};
   }
 
   &:checked ~ ${Spot}:after {
-    background-color: #09afff;
+    background-color: ${palette(`secondary`)};
   }
 `
 

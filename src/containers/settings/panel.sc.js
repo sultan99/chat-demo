@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {palette} from 'common/style'
 
 const Panel = styled.div`
   flex-grow: 1;
@@ -6,9 +7,9 @@ const Panel = styled.div`
   margin-bottom: 50px;
 
   > button {
-    background-color: #f85878;
+    background-color: ${palette(`danger`)};
     bottom: 20px;
-    color: white;
+    color: ${palette(`tattoo`)};
     right: 24px;
     position: absolute;
 

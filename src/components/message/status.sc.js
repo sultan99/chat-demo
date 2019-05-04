@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styled, {css} from 'styled-components'
-import {ifProp} from 'styled-tools'
+import {ifProp, palette} from 'common/style'
 
 const left = css`
   float: left;
@@ -15,7 +15,7 @@ const right = css`
 
 const Status = styled.div`
   clear: both;
-  color: #818da3;
+  color: ${palette(`stone`)};
   font-size: 13px;
   padding-top: 4px;
   ${ifProp(`isOwn`, right, left)}

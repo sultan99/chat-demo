@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types'
 import styled, {css} from 'styled-components'
-import {ifProp} from 'styled-tools'
+import {ifProp, palette} from 'common/style'
 
 const author = css`
-  background-color: #09afff;
+  background-color: ${palette(`secondary`)};
   border-bottom-right-radius: ${ifProp(`isLast`, `0`, `10px`)};
   color: white;
   float: right;
   margin-right: 48px;
 `
+
 const interlocutor = css`
-  background-color: #f1f2f6;
+  background-color: ${palette(`balloon`)};
   border-bottom-left-radius: ${ifProp(`isLast`, `0`, `10px`)};
-  color: #1c2d41;
+  color: ${palette(`text`)};
   float: left;
   margin-left: 48px;
 `

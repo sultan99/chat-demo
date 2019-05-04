@@ -5,7 +5,7 @@ import Scroll from './scroll.sc'
 function scrollDown(ref) {
   const node = ref.current
   window.requestAnimationFrame(() =>
-    node && (node.scrollTop = node.scrollHeight)
+    node && node.scrollTo(0, node.scrollHeight)
   )
 }
 

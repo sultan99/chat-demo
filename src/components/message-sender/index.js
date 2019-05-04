@@ -6,7 +6,9 @@ import Panel from './panel.sc'
 
 function MessageSender({inputText, sender, sendMessage, setInputText}) {
   const refInput = useRef()
-  const onChange = event => setInputText(event.target.value)
+  const onChange = event => (
+    setInputText(event.target.value)
+  )
   const onClick = () => (
     inputText &&
     sendMessage(sender, inputText) &&

@@ -1,10 +1,12 @@
 import styled from 'styled-components'
+import {palette} from 'common/style'
 
 const Input = styled.input`
   border: 0;
-  border-bottom: 2px solid white;
+  background-color: ${palette(`skin`)};
+  border-bottom: 2px solid ${palette(`skin`)};
   box-sizing: border-box;
-  color: #1c2d41;
+  color: ${palette(`text`)};
   display: block;
   font-size: 18px;
   font-weight: 600;
@@ -15,11 +17,11 @@ const Input = styled.input`
   transition: border 0.25s linear;
 
   &:hover {
-    border-bottom: 2px solid #f1f2f6;
+    border-bottom: 2px solid ${palette(`balloon`)};
   }
 
   &::placeholder {
-    color: #c9c9c9;
+    color: ${palette(`lace`)};
     font-weight: 400;
   }
 

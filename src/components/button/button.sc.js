@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import {palette} from 'common/style'
 
 const Button = styled.button`
-  background-color: #00d1b2;
+  background-color: ${palette(`primary`)};
   border-radius: 48px;
   border: 0;
   box-shadow: 0 2px 4px 0px rgba(129, 141, 163, 0.25);
@@ -25,10 +26,11 @@ const Button = styled.button`
   }
 
   &:disabled {
-    background-color: #f1f2f6;
+    background-color:  ${palette(`balloon`)};
     box-shadow: unset;
+
     > svg {
-      fill: #818da3;
+      fill: ${palette(`stone`)};
     }
   }
 `

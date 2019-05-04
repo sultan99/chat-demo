@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import {palette} from 'common/style'
 
 const Input = styled.input`
+  background-color: ${palette(`skin`)};
   border: 0;
   box-sizing: border-box;
   font-size: 15px;
@@ -10,14 +12,16 @@ const Input = styled.input`
   width: 100%;
 
   &::placeholder {
-    color: #818da3;
+    color: ${palette(`stone`)};
   }
   &:active, &:focus {
     outline: none;
   }
   &:focus {
+    color: ${palette(`tattoo`)};
+
     &::placeholder {
-      color: #c9c9c9;
+      color: ${palette(`lace`)};
     }
   }
 `

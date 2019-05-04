@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {ifProp} from 'styled-tools'
+import {ifProp} from 'common/style'
 
 const Pane = styled.div`
   position: relative;

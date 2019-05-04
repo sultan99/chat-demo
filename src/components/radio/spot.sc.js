@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import {palette} from 'common/style'
 
 const Spot = styled.span`
-  background-color: white;
+  background-color: ${palette(`skin`)};
   border-radius: 50%;
-  border: 1px solid #c9c9c9;
+  border: 1px solid ${palette(`lace`)}
   box-sizing: border-box;
   height: 18px;
   left: 0px;
