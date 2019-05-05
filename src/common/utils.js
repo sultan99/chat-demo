@@ -1,3 +1,7 @@
+import {useEffect} from 'react'
+
+export const useMount = mount => useEffect(mount, [])
+
 export function guid() {
   const rnd = c => {
     const r = Math.random() * 16 | 0, v = c === `x` ? r : (r & 0x3 | 0x8)

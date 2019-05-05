@@ -1,23 +1,22 @@
 import React, {useRef} from 'react'
 import Panel from './panel.sc'
-import Scroll from './scroll.sc'
+import {useMount} from 'common/utils'
 
 function scrollDown(ref) {
   const node = ref.current
   window.requestAnimationFrame(() =>
-    node && node.scrollTo(0, node.scrollHeight)
+    window.scrollTo(0, node.scrollHeight)
   )
 }
 
 function ScrollArea({children}) {
   const refScroll = useRef()
+  useMount(() => scrollDown(refScroll))
   scrollDown(refScroll)
 
   return (
-    <Panel>
-      <Scroll ref={refScroll}>
-        {children}
-      </Scroll>
+    <Panel ref={refScroll}>
+      {children}
     </Panel>
   )
 }

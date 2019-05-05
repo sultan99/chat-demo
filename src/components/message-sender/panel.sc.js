@@ -1,12 +1,14 @@
 import styled from 'styled-components'
+import {palette} from 'common/style'
 
 const Panel = styled.div`
-  box-shadow: 0 0 100px 0px rgba(129, 141, 163, 0.2);
-  flex-shrink: 0;
-  margin: 0 -24px;
+  bottom: 0;
+  box-shadow: 0 0 20px 0px ${palette(`shadow`)};
+  max-width: 600px;
   min-height: 60px;
-  position: relative;
+  position: fixed;
   transition: top 0.3s;
+  width: 100%;
 
   > button {
     position: absolute;

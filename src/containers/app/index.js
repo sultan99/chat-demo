@@ -2,7 +2,7 @@ import React from 'react'
 import AppNavigation from 'components/navigation'
 import ChatRoom from 'containers/chat-room'
 import Settings from 'containers/settings'
-import Wrapper from './wrapper.sc'
+import Panel from './panel.sc'
 import connect from './connect'
 import locales from 'locales'
 import theme from './theme'
@@ -13,14 +13,14 @@ import {ThemeProvider} from 'styled-components'
 const App = ({language, mode}) => (
   <I18nProvider language={language} catalogs={locales}>
     <ThemeProvider theme={theme[mode]}>
-      <Wrapper>
+      <Panel>
         <AppNavigation/>
         <Switch>
           <Route path="/chat" component={ChatRoom}/>
           <Route path="/settings" component={Settings}/>
           <Redirect from="/" to="chat"/>
         </Switch>
-      </Wrapper>
+      </Panel>
     </ThemeProvider>
   </I18nProvider>
 )
