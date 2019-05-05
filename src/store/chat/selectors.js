@@ -10,9 +10,32 @@ export const selectInputText = createSelector(
   R.prop(`inputText`)
 )
 
+export const selectLastMessageId = createSelector(
+  selectState,
+  R.prop(`lastMessageId`)
+)
+
 export const selectMessages = createSelector(
   selectState,
   R.prop(`messages`)
+)
+
+export const selectLastMessage = createSelector(
+  selectMessages,
+  R.last
+)
+
+export const selectMessageCount = createSelector(
+  selectLastMessageId,
+  selectMessages,
+  (lastId, messages) => {
+    if (!lastId) return 0
+    const offset = R.findIndex(
+      R.propEq(`id`, lastId),
+      messages
+    )
+    return messages.length - offset - 1
+  }
 )
 
 export const selectMessageFeed = createSelector(

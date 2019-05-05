@@ -4,6 +4,7 @@ import Message from 'components/message'
 import MessageSender from './message-sender'
 import ScrollArea from './scroll-area'
 import connect from './connect'
+import {useMount} from 'common/utils'
 
 const toMessage = userId => (message, index) => (
   <Message
@@ -13,14 +14,19 @@ const toMessage = userId => (message, index) => (
   />
 )
 
-const ChatRoom = ({appUser, messages}) => (
-  <Fragment>
-    <ScrollArea>
-      {messages.map(toMessage(appUser.id))}
-    </ScrollArea>
-    <MessageSender/>
-  </Fragment>
-)
+function ChatRoom({appUser, messages, setMessageId}) {
+  useMount(() => {
+    setMessageId(null)
+  })
+  return (
+    <Fragment>
+      <ScrollArea>
+        {messages.map(toMessage(appUser.id))}
+      </ScrollArea>
+      <MessageSender/>
+    </Fragment>
+  )
+}
 
 ChatRoom.propTypes = {
   appUser: PropTypes.object,

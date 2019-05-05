@@ -7,11 +7,15 @@ const Link = styled(NavLink)`
   display: inline-block;
   text-decoration: none;
 
-  > svg {
+  > span:first-child > svg {
     fill: ${palette(`stone`)};
+
+    &:hover {
+      fill: ${palette(`text`)};
+    }
   }
 
-  > span {
+  > span:last-child {
     display: none;
     margin-left: 6px;
     vertical-align: middle;
@@ -20,11 +24,11 @@ const Link = styled(NavLink)`
   &.active {
     color: ${palette(`text`)};
 
-    > svg {
+    > span:first-child > svg {
       fill: ${palette(`text`)};
     }
 
-    > span {
+    > span:last-child {
       display: inline-block;
     }
   }

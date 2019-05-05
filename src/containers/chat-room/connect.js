@@ -2,7 +2,7 @@ import {connect} from 'react-redux'
 import {createStructuredSelector} from 'reselect'
 import {selectMessageFeed} from 'store/chat/selectors'
 import {selectUser} from 'store/settings/selectors'
-import {sendMessage} from 'store/chat/actions'
+import {setMessageId} from 'store/chat/actions'
 
 const props = createStructuredSelector({
   appUser: selectUser,
@@ -10,7 +10,7 @@ const props = createStructuredSelector({
 })
 
 const actions = {
-  sendMessage
+  setMessageId,
 }
 
 export default connect(props, actions)

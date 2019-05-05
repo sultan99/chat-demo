@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Badge from '../badge'
 import Icon from '../icon'
 import Link from './link.sc'
 
-const NavLink = ({icon, to, children}) => (
+const NavLink = ({icon, to, count, children}) => (
   <Link to={to}>
-    <Icon src={icon} height="24px"/>
+    <Badge count={count}>
+      <Icon src={icon} height="24px"/>
+    </Badge>
     <span>{children}</span>
   </Link>
 )

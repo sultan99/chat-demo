@@ -1,5 +1,5 @@
 import React from 'react'
-import AppNavigation from 'components/navigation'
+import AppNavigation from './navigation'
 import ChatRoom from 'containers/chat-room'
 import Settings from 'containers/settings'
 import Panel from './panel.sc'

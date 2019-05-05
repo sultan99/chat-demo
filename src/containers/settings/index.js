@@ -2,6 +2,7 @@ import React from 'react'
 import Avatar from 'components/avatar'
 import Button from 'components/button'
 import Header from './header.sc'
+import Footer from './footer.sc'
 import Input from './input.sc'
 import Panel from './panel.sc'
 import Radio from 'components/radio'
@@ -9,6 +10,7 @@ import Section from './section.sc'
 import Select from 'components/select'
 import connect from './connect'
 import {Trans, t} from '@lingui/macro'
+import {useMount} from 'common/utils'
 
 function AppSettings(props) {
   const onNameChange = ({target: {value}}) => (
@@ -26,7 +28,10 @@ function AppSettings(props) {
   })
   const theme = makeProps(`theme`)
   const time = makeProps(`timeFormat`)
-
+  useMount(() => {
+    const {lastMessage, setMessageId} = props
+    setMessageId(lastMessage.id)
+  })
   return (
     <Panel>
       <Header>
@@ -79,7 +84,9 @@ function AppSettings(props) {
         </h4>
         (---o)
       </Section>
-      <Button icon="reset" onClick={props.resetSettings}/>
+      <Footer>
+        <Button icon="reset" onClick={props.resetSettings}/>
+      </Footer>
     </Panel>
   )
 }
