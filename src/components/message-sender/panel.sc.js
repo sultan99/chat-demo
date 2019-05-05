@@ -7,16 +7,17 @@ const Panel = styled.div`
   max-width: 600px;
   min-height: 60px;
   position: fixed;
-  transition: top 0.3s;
   width: 100%;
 
   > button {
     position: absolute;
-    right: 21px;
+    right: 20px;
     top: 4px;
+    transition: top 0.3s, transform 0.3s;
 
     &:not(:disabled) {
       top: -4px;
+      transform: scale(1.15);
     }
   }
 `

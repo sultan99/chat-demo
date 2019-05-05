@@ -4,6 +4,7 @@ import {useMount} from 'common/utils'
 
 function scrollDown(ref) {
   const node = ref.current
+  if (!node) return
   window.requestAnimationFrame(() =>
     window.scrollTo(0, node.scrollHeight)
   )

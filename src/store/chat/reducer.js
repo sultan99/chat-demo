@@ -5,26 +5,7 @@ import {updateState} from 'common/reducer-fns'
 
 const initialState = {
   inputText: ``,
-  messages: [
-    {
-      author: {
-        id: 99,
-        name: `Matt Groening`,
-        imageUrl: `/public/images/190503.png`,
-      },
-      text: `Hi there! 👋<br/> I'm Matt Groening`,
-      time: new Date()
-    },
-    {
-      author: {
-        id: 99,
-        name: `Matt Groening`,
-        imageUrl: `/public/images/190503.png`,
-      },
-      text: `Welcome to our chat!`,
-      time: new Date()
-    }
-  ],
+  messages: [],
 }
 
 const setInputText = updateState([`inputText`])
@@ -36,7 +17,14 @@ const appendMessage = message => R.over(
 
 function chatReducer(state = initialState, action) {
   switch (action.type) {
-    case MESSAGE_RECEIVED:
+    case MESSAGE_RECEIVED: {
+      const setState = appendMessage({
+        author: action.author,
+        text: action.text,
+        time: action.time || new Date()
+      })
+      return setState(state)
+    }
     case SEND_MESSAGE: {
       const setState = R.compose(
         setInputText(``),
