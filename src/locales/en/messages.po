@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-05-04 21:58+0600\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/containers/settings/index.js:55
+msgid "12:00 hours"
+msgstr "12:00 hours"
+
+#: src/containers/settings/index.js:58
+msgid "24:00 hours"
+msgstr "24:00 hours"
+
+#: src/components/navigation/index.js:9
+msgid "Chat room"
+msgstr "Chat room"
+
+#: src/containers/settings/index.js:52
+msgid "Clock display"
+msgstr "Clock display"
+
+#: src/containers/settings/index.js:47
+msgid "Dark"
+msgstr "Dark"
+
+#: src/containers/settings/index.js:41
+msgid "Interface color"
+msgstr "Interface color"
+
+#: src/containers/settings/index.js:69
+msgid "Language"
+msgstr "Language"
+
+#: src/containers/settings/index.js:44
+msgid "Light"
+msgstr "Light"
+
+#: src/containers/settings/index.js:63
+msgid "Send message on CTRL+ENTER"
+msgstr "Send message on CTRL+ENTER"
+
+#: src/components/message/index.js:28
+msgid "Sent: {time}"
+msgstr "Sent: {time}"
+
+#: src/components/navigation/index.js:12
+msgid "Settings"
+msgstr "Settings"
+
+#: src/components/message-sender/index.js:28
+msgid "Type message here"
+msgstr "Type message here"
+
+#: src/containers/settings/index.js:34
+msgid "Type your name"
+msgstr "Type your name"

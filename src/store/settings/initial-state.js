@@ -6,7 +6,7 @@ const storedSettings = JSON.parse(
 
 const defaultSettings = {
   ctrEnter: false,
-  language: `english`,
+  language: `en`,
   theme: `light`,
   timeFormat: `hh:mm:ss`,
   user: {

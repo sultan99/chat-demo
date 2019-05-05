@@ -12,8 +12,9 @@ const Link = styled(NavLink)`
   }
 
   > span {
-    margin-left: 6px;
     display: none;
+    margin-left: 6px;
+    vertical-align: middle;
   }
 
   &.active {

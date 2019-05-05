@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import Button from '../button'
 import Input from './input.sc'
 import Panel from './panel.sc'
+import {t} from "@lingui/macro"
 
-function MessageSender({inputText, sender, sendMessage, setInputText}) {
+function MessageSender({inputText, sender, sendMessage, setInputText, i18n}) {
   const refInput = useRef()
   const onChange = event => (
     setInputText(event.target.value)
@@ -24,7 +25,7 @@ function MessageSender({inputText, sender, sendMessage, setInputText}) {
     <Panel>
       <Input
         ref={refInput}
-        placeholder="Type message here"
+        placeholder={i18n._(t`Type message here`)}
         value={inputText}
         onChange={onChange}
         onKeyPress={onKeyPress}

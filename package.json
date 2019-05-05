@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "description": "Chat demo application.",
   "scripts": {
+    "start": "webpack-dev-server",
+    "server": "node index",
     "build": "webpack -p",
     "prebuild": "rimraf dist",
-    "start": "webpack-dev-server",
-    "server": "node index"
+    "add-locale": "lingui add-locale",
+    "extract": "lingui extract",
+    "compile": "lingui compile"
   },
   "author": "sultan99",
   "license": "MIT",
@@ -15,6 +18,7 @@
     "url": "https://github.com/sultan99/chat-demo"
   },
   "dependencies": {
+    "@lingui/react": "^2.7.4",
     "date-fns": "^1.30.1",
     "express": "^4.16.4",
     "history": "^4.9.0",
@@ -32,12 +36,16 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.0",
+    "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
+    "@lingui/cli": "^2.7.4",
+    "@lingui/macro": "^2.7.4",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
+    "babel-plugin-macros": "^2.5.1",
     "babel-runtime": "^6.26.0",
     "copy-webpack-plugin": "^5.0.2",
     "eslint": "^5.15.3",

@@ -5,6 +5,7 @@ import Balloon from './balloon.sc'
 import Caption from './caption.sc'
 import Pane from './pane.sc'
 import Status from './status.sc'
+import {Trans} from '@lingui/macro'
 
 function Message({author, texts, time, isOwn}) {
   const len = texts.length - 1
@@ -24,7 +25,7 @@ function Message({author, texts, time, isOwn}) {
       </Caption>
       {texts.map(toBalloon)}
       <Status isOwn={isOwn}>
-        Sent: {time}
+        <Trans>Sent: {time}</Trans>
       </Status>
       <Avatar src={author.imageUrl}/>
     </Pane>

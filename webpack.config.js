@@ -22,6 +22,7 @@ module.exports = {
       common: rootPath(`./src/common`),
       components: rootPath(`./src/components`),
       containers: rootPath(`./src/containers`),
+      locales: rootPath(`./src/locales`),
       store: rootPath(`./src/store`),
     }
   },
