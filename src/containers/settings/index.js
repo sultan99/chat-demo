@@ -78,7 +78,7 @@ function AppSettings(props) {
           <option value="ru">Русский</option>
         </select>
       </Section>
-      <Button icon="reset"/>
+      <Button icon="reset" onClick={props.resetSettings}/>
     </Panel>
   )
 }

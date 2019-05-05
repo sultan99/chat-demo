@@ -4,7 +4,7 @@ const storedSettings = JSON.parse(
   localStorage.getItem(`app-settings`) || null
 )
 
-const defaultSettings = {
+export const defaultSettings = {
   ctrEnter: false,
   language: `en`,
   theme: `light`,

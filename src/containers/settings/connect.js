@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {createStructuredSelector} from 'reselect'
 import {selectTheme, selectTimeFormat} from 'store/settings/selectors'
 import {selectUser, selectLanguage} from 'store/settings/selectors'
-import {setSetting} from 'store/settings/actions'
+import {resetSettings, setSetting} from 'store/settings/actions'
 import {withI18n} from "@lingui/react"
 
 const props = createStructuredSelector({
@@ -14,7 +14,8 @@ const props = createStructuredSelector({
 })
 
 const actions = {
-  setSetting
+  resetSettings,
+  setSetting,
 }
 
 export default compose(
