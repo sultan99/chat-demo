@@ -6,6 +6,7 @@ import Input from './input.sc'
 import Panel from './panel.sc'
 import Radio from 'components/radio'
 import Section from './section.sc'
+import Select from 'components/select'
 import connect from './connect'
 import {Trans, t} from '@lingui/macro'
 
@@ -60,15 +61,9 @@ function AppSettings(props) {
       </Section>
       <Section>
         <h4>
-          <Trans>Send message on CTRL+ENTER</Trans>
-        </h4>
-        (---o)
-      </Section>
-      <Section>
-        <h4>
           <Trans>Language</Trans>
         </h4>
-        <select
+        <Select
           name="language"
           value={props.language}
           onChange={onLangChange}
@@ -76,7 +71,13 @@ function AppSettings(props) {
           <option value="en">English</option>
           <option value="fr">Française</option>
           <option value="ru">Русский</option>
-        </select>
+        </Select>
+      </Section>
+      <Section>
+        <h4>
+          <Trans>Send message on CTRL+ENTER</Trans>
+        </h4>
+        (---o)
       </Section>
       <Button icon="reset" onClick={props.resetSettings}/>
     </Panel>

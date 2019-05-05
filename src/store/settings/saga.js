@@ -5,12 +5,12 @@ import {selectState} from '../settings/selectors'
 import {takeEvery} from 'redux-saga/effects'
 
 function* resetSettings() {
-  storeSettings(defaultSettings)
+  yield storeSettings(defaultSettings)
 }
 
 function* setSetting() {
   const data = yield select(selectState)
-  storeSettings(data)
+  yield storeSettings(data)
 }
 
 function* storeSettings(data) {
