@@ -12,7 +12,7 @@ export const defaultSettings = {
   user: {
     id: guid(),
     name: `guest000${random(1, 100)}`,
-    imageUrl: `/public/images/19050${random(2, 7)}.png`,
+    imageUrl: `/images/19050${random(2, 7)}.png`,
   },
 }
 

@@ -1,29 +1,37 @@
+## Chat Demo Application
+<img src="./ui-screen-shot.png"/>
+
+🍭 Here you can find UI prototype: [figma](https://www.figma.com/file/bnnQmfeQ55yaAOIQqbzRmqtp/ChatApp?node-id=0%3A1)
+
+<br/>
+
 ## Getting started
 Don't warry be magic 🧙‍
 
 🧙‍ Three magic commands to get the project:
 ```sh
-$ git clone git@github.com:sultan99/chat-demo.git
-$ cd chat-demo
-$ npm i
+git clone git@github.com:sultan99/chat-demo.git
+cd chat-demo
+npm i
 ```
 <br/>
 
+🧙‍ Three magic words to start:
+```sh
+npm run server
+```
+<br/>
+
+🔗 One magic link to get involved: [http://localhost:3000](http://localhost:3000/)
+<br/>
+<br/>
+
+## Development enviroment
 🧙‍ Two magic words to start:
 ```sh
-$ npm start
+npm start
 ```
 <br/>
 
-🧙 One magic link to get involved: [http://localhost:8080](http://localhost:8080/)
+🔥 Hot reloads on every changes: [http://localhost:8080](http://localhost:8080/)
 <br/>
-<br/>
-
-## Build
-🧙‍ Three magic words to build:
-```sh
-$ npm run build
-```
-<br/>
-
-Check `dist` folder for output.

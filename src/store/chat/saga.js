@@ -22,9 +22,9 @@ function* startBots() {
 }
 
 function* onMessage() {
-  const appUser = yield select(selectUser)
   while (true) {
     const {author, text, time} = yield take(socketChannel)
+    const appUser = yield select(selectUser)
     if (appUser.id !== author.id) {
       yield put(messageReceived(author, text, time))
     }

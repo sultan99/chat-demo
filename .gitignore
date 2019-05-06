@@ -1,3 +1,4 @@
-_build
-dist
-node_modules
+/node_modules
+/public/bundle.js
+/public/index.html
+/src/locales/_build

@@ -1,19 +1,23 @@
-const app = require(`express`)()
+const express = require(`express`)
+const app = express()
+const fs = require(`fs`)
 const http = require(`http`).Server(app)
 const io = require(`socket.io`)(http)
 const port = process.env.PORT || 3000
 
-function onData(data) {
-  const {author, text} = data
-  const time = data.time || new Date()
-  const message = {author, text, time}
+app.use(express.static(`public`))
 
-  io.emit(`chat:message`, message)
-  console.info(message)
-}
+app.use(`*`, (req, res) => {
+  fs.createReadStream(`./public/index.html`).pipe(res)
+})
 
 io.on(`connection`, socket =>
-  socket.on(`chat:message`, onData)
+  socket.on(`chat:message`, data => {
+    const {author, text} = data
+    const time = data.time || new Date()
+    const message = {author, text, time}
+    io.emit(`chat:message`, message)
+  })
 )
 
 http.listen(port, () => {

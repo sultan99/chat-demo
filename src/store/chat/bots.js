@@ -1,18 +1,18 @@
 const sultan = {
   id: `6ot5-b587-4af2-b48x`,
   name: `Sultan Arziyev`,
-  imageUrl: `/public/images/sultan.png`,
+  imageUrl: `/images/sultan.png`,
 }
 
 const patrick = {
   id: `p4tr-ik587-4af2-b48x`,
   name: `Patrick`,
-  imageUrl: `/public/images/patrick.png`,
+  imageUrl: `/images/patrick.png`,
 }
 const patrickAngry = {
   id: `p4tr-an84-4af2-b48x`,
   name: `Patrick`,
-  imageUrl: `/public/images/patrick-angry.png`,
+  imageUrl: `/images/patrick-angry.png`,
 }
 
 const dialogs = [

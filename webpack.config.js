@@ -1,3 +1,4 @@
+const CopyPlugin = require(`copy-webpack-plugin`)
 const HtmlWebPackPlugin = require(`html-webpack-plugin`)
 const path = require(`path`)
 
@@ -29,9 +30,16 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: rootPath(`./src/index.html`)
-    })
+    }),
+    new CopyPlugin([{
+      from: rootPath(`./public`)
+    }]),
   ],
   devServer: {
     historyApiFallback: true
-  }
+  },
+  output: {
+    filename: `bundle.js`,
+    path: rootPath(`./public`)
+  },
 }
