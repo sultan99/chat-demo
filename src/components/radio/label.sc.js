@@ -1,5 +1,6 @@
 import Spot from './spot.sc'
 import styled from 'styled-components'
+import {palette} from 'common/style'
 
 const Label = styled.label`
   cursor: pointer;
@@ -9,7 +10,7 @@ const Label = styled.label`
 
   &:hover {
     > ${Spot} {
-      border: 1px solid #09afff;
+      border: 1px solid ${palette(`secondary`)};
     }
   }
 `
