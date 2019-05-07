@@ -5,11 +5,7 @@ const isEmpty = str => (
   !str.replace(/[\s\t\n]+/g, ``).length
 )
 
-const emitChange = (multiline, onChange) => event => {
-  const childs = event.target.childNodes
-  if (!multiline && childs.length > 1) {
-    event.target.innerHTML = childs[0].innerHTML || ``
-  }
+const emitChange = onChange => event => {
   const html = event.target.innerHTML
   const text = event.target.innerText
   const value = isEmpty(text) ? `` : html
@@ -17,7 +13,7 @@ const emitChange = (multiline, onChange) => event => {
 }
 
 function InputText(props, ref) {
-  const {multiline, placeholder, value, onChange, ...rest} = props
+  const {placeholder, value, onChange, ...rest} = props
   if (!value && ref.current) {
     window.requestAnimationFrame(() =>
       ref.current.innerHTML = ``
@@ -29,7 +25,7 @@ function InputText(props, ref) {
       ref={ref}
       contentEditable
       data-text={placeholder}
-      onInput={emitChange(multiline, onChange)}
+      onInput={emitChange(onChange)}
       {...rest}
     />
   )

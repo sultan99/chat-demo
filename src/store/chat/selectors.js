@@ -5,11 +5,6 @@ import {selectTimeFormat} from '../settings/selectors'
 
 export const selectState = R.prop(`chat`)
 
-export const selectInputText = createSelector(
-  selectState,
-  R.prop(`inputText`)
-)
-
 export const selectLastMessageId = createSelector(
   selectState,
   R.prop(`lastMessageId`)

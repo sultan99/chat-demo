@@ -1,10 +1,9 @@
 import {MESSAGE_RECEIVED} from './actions'
-import {SET_INPUT_TEXT, SET_MESSAGE_ID} from './actions'
+import {SET_MESSAGE_ID} from './actions'
 import {appendState, updateState} from 'common/reducer-fns'
 import {guid} from 'common/utils'
 
 const initialState = {
-  inputText: ``,
   lastMessageId: null,
   messages: [],
 }
@@ -20,11 +19,6 @@ function chatReducer(state = initialState, action) {
       }
       return appendState(
         `messages`, newMessage, state
-      )
-    }
-    case SET_INPUT_TEXT: {
-      return updateState(
-        `inputText`, action.value, state
       )
     }
     case SET_MESSAGE_ID: {
