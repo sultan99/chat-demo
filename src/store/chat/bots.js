@@ -9,6 +9,7 @@ const patrick = {
   name: `Patrick`,
   imageUrl: `/images/patrick.png`,
 }
+
 const patrickAngry = {
   id: `p4tr-an84-4af2-b48x`,
   name: `Patrick`,
@@ -62,7 +63,15 @@ const dialogs = [
   ], [
     {
       author: sultan,
-      text: `You can change settings by clicking on the <b><i>gear</i></b> on top right corner.`
+      text: `
+        You can decorate your text before sending.<br>
+        Select text and press:
+        <ul>
+          <li>to make it bold: <b>ctrl+b</b></li>
+          <li>to make it italic: <i>ctrl+i</i></li>
+          <li>to underline: <u>ctrl+u</u></li>
+        </ul>
+      `
     },
     3000
   ], [

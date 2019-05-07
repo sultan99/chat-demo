@@ -5,10 +5,10 @@ const storedSettings = JSON.parse(
 )
 
 export const defaultSettings = {
-  ctrEnter: false,
+  ctrlEnter: false,
   language: `en`,
   theme: `light`,
-  timeFormat: `hh:mm:ss`,
+  timeFormat: `HH:mm`,
   user: {
     id: guid(),
     name: `guest000${random(1, 100)}`,

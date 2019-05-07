@@ -3,6 +3,11 @@ import {createSelector} from 'reselect'
 
 export const selectState = R.prop(`settings`)
 
+export const selectCtrlEnter = createSelector(
+  selectState,
+  R.prop(`ctrlEnter`)
+)
+
 export const selectLanguage = createSelector(
   selectState,
   R.prop(`language`)

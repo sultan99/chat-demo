@@ -6,6 +6,7 @@ const Pane = styled.div`
   position: relative;
 
   > img {
+    border-radius: 50%;
     bottom: 6px;
     height: 40px;
     position: absolute;

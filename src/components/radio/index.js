@@ -5,8 +5,8 @@ import Label from './label.sc'
 import Spot from './spot.sc'
 import Text from './text.sc'
 
-const Radio = ({children, ...rest}) => (
-  <Label >
+const Radio = ({width, children, ...rest}) => (
+  <Label width={width}>
     <Input type="radio" {...rest}/>
     <Spot/>
     <Text>{children}</Text>

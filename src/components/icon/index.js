@@ -6,7 +6,7 @@ import iconsList from './svg'
 function Icon({src, ...props}) {
   const href = src && src.id ? src : iconsList[src]
   if (!href) {
-    throw new Error(`No icon with name '${src}'`)
+    throw new Error(`No icon found: '${src}'`)
   }
   return (
     <Svg viewBox={href.viewBox} {...props}>

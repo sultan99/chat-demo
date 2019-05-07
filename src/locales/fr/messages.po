@@ -47,7 +47,7 @@ msgstr "Lumière"
 
 #: src/containers/settings/index.js:63
 msgid "Send message on CTRL+ENTER"
-msgstr "Envoyer un message sur CTRL + ENTER"
+msgstr "Envoyer un message sur CTRL+ENTER"
 
 #: src/components/message/index.js:28
 msgid "Sent: {time}"

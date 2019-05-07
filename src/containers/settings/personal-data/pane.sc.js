@@ -6,6 +6,8 @@ const Header = styled.div`
   text-align: center;
 
   > img {
+    border-radius: 50%;
+    cursor: pointer;
     height: 130px;
     width: 130px;
   }

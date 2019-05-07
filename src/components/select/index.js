@@ -1,9 +1,10 @@
 import React, {useRef, useState} from 'react'
+import PropTypes from 'prop-types'
 import Arrow from './arrow.sc'
 import Pane from './pane.sc'
 import Select from './select.sc'
 
-function DropList(props) {
+function DropList({width, ...rest}) {
   const refSelect = useRef()
   const [isOpen, setState] = useState(false)
   const onClick = () => {
@@ -12,11 +13,16 @@ function DropList(props) {
   }
 
   return (
-    <Pane>
-      <Select ref={refSelect} {...props} onClick={onClick}/>
+    <Pane width={width}>
+      <Select ref={refSelect} {...rest} onClick={onClick}/>
       <Arrow/>
     </Pane>
   )
+}
+
+DropList.propTypes = {
+  onChange: PropTypes.func,
+  width: PropTypes.string,
 }
 
 export default DropList

@@ -44,6 +44,7 @@ export const selectMessageFeed = createSelector(
   (timeFormat, messages) => messages.reduce((acc, next) => {
     const last = R.last(acc)
     if (last && last.author.id === next.author.id) {
+      last.author = next.author
       last.texts.push(next.text)
       last.time = format(next.time, timeFormat)
     }

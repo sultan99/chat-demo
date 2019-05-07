@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Menu from './menu.sc'
 import NavLink from './nav-link'
 import {Trans} from '@lingui/macro'
@@ -13,5 +14,9 @@ const AppNavigation = ({messageCount}) => (
     </NavLink>
   </Menu>
 )
+
+AppNavigation.propTypes = {
+  messageCount: PropTypes.number,
+}
 
 export default AppNavigation

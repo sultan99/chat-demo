@@ -1,15 +1,11 @@
 import styled from 'styled-components'
 
-const Section = styled.div`
+const Pane = styled.div`
   padding: 0 3px;
-
-  > :nth-child(2) {
-    min-width: 150px;
-  }
 
   & + & {
     margin-top: 60px;
   }
 `
 
-export default Section
+export default Pane

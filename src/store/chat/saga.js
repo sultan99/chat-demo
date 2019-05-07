@@ -1,11 +1,10 @@
 import {SEND_MESSAGE} from './actions'
 import botDialogs from './bots'
 import io from 'socket.io-client'
-import {eventChannel} from 'redux-saga'
-import {fork, put, select} from 'redux-saga/effects'
-import {messageReceived} from './actions'
-import {selectUser} from '../settings/selectors'
 import {delay, take, takeEvery} from 'redux-saga/effects'
+import {eventChannel} from 'redux-saga'
+import {fork, put} from 'redux-saga/effects'
+import {messageReceived} from './actions'
 
 const socket = io(`http://localhost:3000`)
 
@@ -24,10 +23,7 @@ function* startBots() {
 function* onMessage() {
   while (true) {
     const {author, text, time} = yield take(socketChannel)
-    const appUser = yield select(selectUser)
-    if (appUser.id !== author.id) {
-      yield put(messageReceived(author, text, time))
-    }
+    yield put(messageReceived(author, text, time))
   }
 }
 

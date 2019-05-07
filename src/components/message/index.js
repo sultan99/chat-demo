@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Avatar from '../avatar'
 import Balloon from './balloon.sc'
 import Caption from './caption.sc'
 import Pane from './pane.sc'
@@ -27,7 +26,7 @@ function Message({author, texts, time, isOwn}) {
       <Status isOwn={isOwn}>
         <Trans>Sent: {time}</Trans>
       </Status>
-      <Avatar src={author.imageUrl}/>
+      <img src={author.imageUrl}/>
     </Pane>
   )
 }

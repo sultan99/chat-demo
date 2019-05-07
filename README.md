@@ -8,7 +8,7 @@
 ## Getting started
 Don't warry be magic 🧙‍
 
-🧙‍ Three magic commands to get the project:
+🧙‍ Three magic lines to get the project:
 ```sh
 git clone git@github.com:sultan99/chat-demo.git
 cd chat-demo
@@ -30,6 +30,12 @@ npm run server
 🧙‍ Two magic words to start:
 ```sh
 npm start
+```
+<br/>
+
+On another terminal server should be running:
+```sh
+npm run server
 ```
 <br/>
 

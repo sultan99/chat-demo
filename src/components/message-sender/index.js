@@ -1,11 +1,16 @@
-import React, {useRef} from 'react'
-import PropTypes from 'prop-types'
 import Button from '../button'
-import Input from './input.sc'
+import PropTypes from 'prop-types'
+import InputText from '../input-text'
 import Panel from './panel.sc'
+import React, {useRef} from 'react'
 import {t} from "@lingui/macro"
 
-function MessageSender({inputText, sender, sendMessage, setInputText, i18n}) {
+const hitKey = (event, isCtrl) => (
+  isCtrl && event.ctrlKey && event.key === `Enter` ||
+  !isCtrl && event.key === `Enter`
+)
+
+function MessageSender({inputText, sender, sendMessage, setInputText, i18n, isCtrlEnter}) {
   const refInput = useRef()
   const onChange = event => (
     setInputText(event.target.value)
@@ -13,22 +18,25 @@ function MessageSender({inputText, sender, sendMessage, setInputText, i18n}) {
   const onClick = () => (
     inputText &&
     sendMessage(sender, inputText) &&
+    setInputText(``) &&
     refInput.current.focus()
   )
-  const onKeyPress = event => {
+  const onKeyDown = event => {
     inputText &&
-    event.key === `Enter` &&
-    sendMessage(sender, inputText)
+    hitKey(event, isCtrlEnter) &&
+    sendMessage(sender, inputText) &&
+    setInputText(``)
   }
 
   return (
     <Panel>
-      <Input
+      <InputText
         ref={refInput}
+        multiline={isCtrlEnter}
         placeholder={i18n._(t`Type message here`)}
         value={inputText}
         onChange={onChange}
-        onKeyPress={onKeyPress}
+        onKeyDown={onKeyDown}
       />
       <Button
         icon="send"
@@ -41,6 +49,7 @@ function MessageSender({inputText, sender, sendMessage, setInputText, i18n}) {
 
 MessageSender.propTypes = {
   inputText: PropTypes.string,
+  onKey: PropTypes.string,
   sender: PropTypes.object,
   sendMessage: PropTypes.func,
   setInputText: PropTypes.func,
