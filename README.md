@@ -16,8 +16,9 @@ npm i
 ```
 <br/>
 
-🧙‍ Three magic words to start:
+🧙‍ Two magic commands to start:
 ```sh
+npm run build
 npm run server
 ```
 <br/>
@@ -33,7 +34,7 @@ npm start
 ```
 <br/>
 
-On another terminal server should be running:
+On another terminal run server:
 ```sh
 npm run server
 ```

@@ -6,10 +6,9 @@ const isEmpty = str => (
 )
 
 const emitChange = onChange => event => {
-  const html = event.target.innerHTML
-  const text = event.target.innerText
-  const value = isEmpty(text) ? `` : html
-  onChange({target: {value}})
+  const {innerHTML, innerText} = event.target
+  const value = isEmpty(innerText) ? `` : innerHTML
+  onChange(value)
 }
 
 function InputText(props, ref) {

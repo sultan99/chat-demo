@@ -14,9 +14,6 @@ function MessageSender({i18n, isCtrlEnter, sender, sendMessage}) {
   const refInput = useRef()
   const [inputText, setInputText] = useState(``)
 
-  const onChange = event => (
-    setInputText(event.target.value)
-  )
   const onClick = () => {
     sendMessage(sender, inputText)
     setInputText(``)
@@ -24,7 +21,7 @@ function MessageSender({i18n, isCtrlEnter, sender, sendMessage}) {
   }
   const onKeyDown = event => {
     if (inputText && hitKey(event, isCtrlEnter)) {
-      sendMessage(sender, inputText) &&
+      sendMessage(sender, inputText)
       setInputText(``)
     }
     if (event.key === `Enter` && !isCtrlEnter) {
@@ -39,7 +36,7 @@ function MessageSender({i18n, isCtrlEnter, sender, sendMessage}) {
         multiline={isCtrlEnter}
         placeholder={i18n._(t`Type message here`)}
         value={inputText}
-        onChange={onChange}
+        onChange={setInputText}
         onKeyDown={onKeyDown}
       />
       <Button

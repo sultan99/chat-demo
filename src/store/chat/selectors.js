@@ -1,6 +1,6 @@
 import * as R from 'ramda'
+import format from 'date-fns/format'
 import {createSelector} from 'reselect'
-import {format} from 'date-fns'
 import {selectTimeFormat} from '../settings/selectors'
 
 export const selectState = R.prop(`chat`)

@@ -6,6 +6,7 @@ yarn.lock merge=ours
 *.html text eol=lf
 *.js text eol=lf
 *.json text eol=lf
+*.po text eol=lf
 *.svg text eol=lf
 *.txt text eol=lf
 
@@ -17,7 +18,8 @@ yarn.lock merge=ours
 # misc config
 .editorconfig text eol=lf
 .eslintrc eol=lf
-*.yaml text eol=lf
+.linguirc eol=lf
+.yaml text eol=lf
 *.yml text eol=lf
 
 # Documentation

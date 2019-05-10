@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Pane = styled.div`
+const Section = styled.div`
   padding: 0 3px;
 
   & + & {
@@ -8,4 +8,4 @@ const Pane = styled.div`
   }
 `
 
-export default Pane
+export default Section
