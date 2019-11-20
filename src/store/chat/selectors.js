@@ -1,5 +1,5 @@
 import * as R from 'ramda'
-import format from 'date-fns/format'
+import {format, parseISO} from 'date-fns'
 import {createSelector} from 'reselect'
 import {selectTimeFormat} from '../settings/selectors'
 

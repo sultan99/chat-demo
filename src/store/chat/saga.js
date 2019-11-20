@@ -23,7 +23,7 @@ function* startBots() {
 function* onMessage() {
   while (true) {
     const {author, text, time} = yield take(socketChannel)
-    yield put(messageReceived(author, text, time))
+    yield put(messageReceived(author, text, new Date(time)))
   }
 }
 
